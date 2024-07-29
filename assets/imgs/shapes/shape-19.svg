@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 198.00 139.00">
+<path fill="#102039" d="
+  M 0.00 138.73
+  L 0.00 98.72
+  L 81.70 0.31
+  A 0.36 0.36 0.0 0 1 82.26 0.31
+  L 196.78 138.27
+  A 0.27 0.26 -19.6 0 1 196.57 138.70
+  L 0.00 138.73
+  Z"
+/>
+</svg>
