@@ -11,24 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
         searchResults.innerHTML = '';
 
         if (query) {
-            const results = searchContent(query);
-            displayResults(results);
+            searchContent(query);
         }
     });
 
-    function searchContent(query) {
-        const content = [
-            { title: 'Asphalt Paving', url: 'asphalt_paving.html', keywords: ['asphalt', 'paving', 'installation', 'resurfacing', 'replacement', 'extension'] },
-            { title: 'Sealer', url: 'sealer.html', keywords: ['sealcoating', 'asphalt maintenance', 'crack filling', 'line striping'] },
-            { title: 'Masonry', url: 'masonry.html', keywords: ['pavers installation', 'paver maintenance', 'retaining walls', 'belgium blocks'] },
-            { title: 'Concrete', url: 'concrete.html', keywords: ['walkways', 'sidewalks', 'curbs', 'aprons'] },
-            { title: 'Landscaping', url: 'landscaping.html', keywords: ['sod installation', 'top soil', 'seed grass', 'drainage', 'gutters', 'power wash', 'hauling', 'winter services'] }
-        ];
-
-        return content.filter(item => 
-            item.title.toLowerCase().includes(query) || 
-            item.keywords.some(keyword => keyword.toLowerCase().includes(query))
-        );
+    async function searchContent(query) {
+        try {
+            const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const results = await response.json();
+            displayResults(results);
+        } catch (error) {
+            console.error('Error:', error);
+            searchResults.innerHTML = '<p>An error occurred while searching</p>';
+        }
     }
 
     function highlightKeywords(text, query) {
@@ -49,7 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const resultItem = document.createElement('div');
                 resultItem.classList.add('search-result-item');
                 const highlightedTitle = highlightKeywords(result.title, searchInput.value);
-                resultItem.innerHTML = `<a href="${result.url}">${highlightedTitle}</a>`;
+                const highlightedDescription = highlightKeywords(result.description, searchInput.value);
+                resultItem.innerHTML = `
+                    <a href="${result.url}">${highlightedTitle}</a>
+                    <p>${highlightedDescription}</p>
+                `;
                 searchResults.appendChild(resultItem);
             });
         } else {
@@ -68,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener('keyup', function() {
         const query = this.value.toLowerCase().trim();
         if (query.length >= 2) {
-            const results = searchContent(query);
-            displayResults(results);
+            searchContent(query);
         } else {
             searchResults.innerHTML = '';
         }
