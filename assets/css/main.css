@@ -1827,6 +1827,10 @@ figure{
 /*----------------------------------------*/
 /*  BANNER CSS START
 /*----------------------------------------*/
+.main-banner-title {
+  font-size: 64px; /* Estilo específico para el primer h1 */
+  color: var(--theme-color); /* Cambia el color si es necesario */
+}
 
 .banner-main {
   max-width: auto;
@@ -1876,6 +1880,15 @@ figure{
 }
 
 h1.banner-title {
+  color: #FFF;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 77px;
+  padding: 20px 0;
+}
+
+h2.banner-title {
   color: #FFF;
   font-size: 64px;
   font-style: normal;
@@ -2833,6 +2846,17 @@ h1.banner-title {
   gap: 10px;
 }
 
+.slide-box h2 {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px; /* 57.5% */
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--theme-color-1);
+  color: transparent;
+}
+
 .text-slider-box .slide-box h1 {
   font-size: 80px;
   font-style: normal;
@@ -3192,6 +3216,10 @@ h1.banner-title {
 }
 
 .text-slider-section.is-dark h1{
+  -webkit-text-stroke-color: #fff;
+}
+
+.text-slider-section.is-dark h2{
   -webkit-text-stroke-color: #fff;
 }
 
