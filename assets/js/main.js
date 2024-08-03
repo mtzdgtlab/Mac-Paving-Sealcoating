@@ -1,12 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-  Theme Name: Gramen - Roofing Services HTML5 Template
-  Author: Gramentheme
-  Support: https://gramentheme.com/contact-us/
-  Description: Gramen - Roofing Services HTML5 Template
-  Version: 1.0
-
------------------------------------------------------------------------------------
 
 /************ TABLE OF CONTENTS ***************
 
@@ -43,23 +34,21 @@
 
 
 **********************************************/
-
-
 (function ($) {
-	"use strict";
-	var windowOn = $(window);
+    "use strict";
+    var windowOn = $(window);
 
-	/*======================================
-	Preloader activation
-	========================================*/
-	$(window).on('load', function (event) {
-		$('#preloader').delay(500).fadeOut(500);
-	});
+    /*======================================
+    Preloader activation
+    ========================================*/
+    $(window).on('load', function (event) {
+        $('#preloader').delay(500).fadeOut(500);
+    });
 
-	/*======================================
-	button hover
-	========================================*/
-	$('.btn-hover').on('mouseenter', function(e) {
+    /*======================================
+    button hover
+    ========================================*/
+    $('.btn-hover').on('mouseenter', function(e) {
         var parentOffset = $(this).offset(),
             relX = e.pageX - parentOffset.left,
             relY = e.pageY - parentOffset.top;
@@ -85,100 +74,248 @@
         })
     });
 
+    /*======================================
+    Mobile Menu Js
+    ========================================*/
+    $('#mobile-menu').meanmenu({
+        meanMenuContainer: '.mobile-menu',
+        meanScreenWidth: "991",
+        meanExpand: ['<i class="fal fa-plus"></i>'],
+    });
 
-	/*======================================
-	Mobile Menu Js
-	========================================*/
-	$('#mobile-menu').meanmenu({
-		meanMenuContainer: '.mobile-menu',
-		meanScreenWidth: "991",
-		meanExpand: ['<i class="fal fa-plus"></i>'],
-	});
+    $("#mobile-menu-2").meanmenu({
+        meanMenuContainer: ".mobile-menu-2",
+        meanScreenWidth: "4000",
+        meanExpand: ['<i class="fal fa-plus"></i>'],
+    });
 
-	$("#mobile-menu-2").meanmenu({
-		meanMenuContainer: ".mobile-menu-2",
-		meanScreenWidth: "4000",
-		meanExpand: ['<i class="fal fa-plus"></i>'],
-	});
+    /*======================================
+    Sidebar Toggle
+    ========================================*/
+    $(".offcanvas__close,.offcanvas__overlay").on("click", function () {
+        $(".offcanvas__info").removeClass("info-open");
+        $(".offcanvas__overlay").removeClass("overlay-open");
+    });
+    $(".sidebar__toggle").on("click", function () {
+        $(".offcanvas__info").addClass("info-open");
+        $(".offcanvas__overlay").addClass("overlay-open");
+    });
 
-	/*======================================
-	Sidebar Toggle
-	========================================*/
-	$(".offcanvas__close,.offcanvas__overlay").on("click", function () {
-		$(".offcanvas__info").removeClass("info-open");
-		$(".offcanvas__overlay").removeClass("overlay-open");
-	});
-	$(".sidebar__toggle").on("click", function () {
-		$(".offcanvas__info").addClass("info-open");
-		$(".offcanvas__overlay").addClass("overlay-open");
-	});
+    /*======================================
+    Body overlay Js
+    ========================================*/
+    $(".body-overlay").on("click", function () {
+        $(".offcanvas__area").removeClass("offcanvas-opened");
+        $(".df-search-area").removeClass("opened");
+        $(".body-overlay").removeClass("opened");
+    });
 
-	/*======================================
-	Body overlay Js
-	========================================*/
-	$(".body-overlay").on("click", function () {
-		$(".offcanvas__area").removeClass("offcanvas-opened");
-		$(".df-search-area").removeClass("opened");;
-		$(".body-overlay").removeClass("opened");
-	});
+    /*======================================
+    Search Header Js
+    ========================================*/
+    $(document).ready(function() {
+        const content = [
+            {
+                title: 'Asphalt Paving', 
+                url: 'asphalt_paving.html', 
+                keywords: [
+                    { keyword: 'Installation', url: 'installation.html' },
+                    { keyword: 'Resurfacing', url: 'resurfacing.html' },
+                    { keyword: 'Replacement', url: 'replacement.html' },
+                    { keyword: 'Extension', url: 'extension.html' }
+                ]
+            },
+            {
+                title: 'Sealer', 
+                url: 'sealer.html', 
+                keywords: [
+                    { keyword: 'Sealcoating', url: 'sealcoating.html' },
+                    { keyword: 'Asphalt Maintenance', url: 'asphalt_maintenance.html' },
+                    { keyword: 'Crack Filling', url: 'crack_filling.html' },
+                    { keyword: 'Line Striping', url: 'line_striping.html' }
+                ]
+            },
+            {
+                title: 'Masonry', 
+                url: 'masonry.html', 
+                keywords: [
+                    { keyword: 'Pavers Installation', url: 'pavers_installation.html' },
+                    { keyword: 'Paver Maintenance', url: 'paver_maintenance.html' },
+                    { keyword: 'Retaining Walls', url: 'retaining_walls.html' },
+                    { keyword: 'Belgium Blocks', url: 'belgium_blocks.html' }
+                ]
+            },
+            {
+                title: 'Concrete', 
+                url: 'concrete.html', 
+                keywords: [
+                    { keyword: 'walkways', url: 'walkways.html' },
+                    { keyword: 'sidewalks', url: 'sidewalks.html' },
+                    { keyword: 'curbs', url: 'curbs.html' },
+                    { keyword: 'Walkways', url: 'walkways.html' },
+					{ keyword: 'Sidewalks', url: 'sidewalks.html' },
+					{ keyword: 'Curbs', url: 'curbs.html' },
+					{ keyword: 'Aprons', url: 'aprons.html' }
+                ]
+            },
+            {
+                title: 'Landscaping', 
+                url: 'landscaping.html', 
+                keywords: [
+                    { keyword: 'Sod Installation ', url: 'sod_installation.html' },
+                    { keyword: 'Top Soil', url: 'top_soil.html' },
+                    { keyword: 'Seed Grass', url: 'seed_grass.html' },
+                    { keyword: 'Drainage', url: 'drainage.html' },
+                    { keyword: 'Gutters', url: 'gutters.html' },
+                    { keyword: 'Power Wash', url: 'power_wash.html' },
+                    { keyword: 'Hauling', url: 'hauling.html' },
+                    { keyword: 'Winter Services ', url: 'winter_services.html' }
+                ]
+            }
+        ];
 
-	/*======================================
-	Search Header Js
-	========================================*/
-	$(".search-toggle-open").on("click", function () {
-		$(".df-search-area").addClass("opened");
-		$(".body-overlay").addClass("opened");
-	});
-	$(".tp-search-close-btn").on("click", function () {
-		$(".df-search-area").removeClass("opened");
-		$(".body-overlay").removeClass("opened");
-	});
+        $(".search-toggle-open").on("click", function () {
+            $(".df-search-area").addClass("opened");
+            $(".body-overlay").addClass("opened");
+        });
 
-  	/*======================================
-	Sticky Header Js
-	========================================*/
+        $(".tp-search-close-btn").on("click", function () {
+            $(".df-search-area").removeClass("opened");
+            $(".body-overlay").removeClass("opened");
+        });
 
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 250) {
-		  $("#header-sticky").addClass("sticky");
-		} else {
-		  $("#header-sticky").removeClass("sticky");
-		}
-	});
+        $(".df-search-category a").on("click", function(e) {
+            e.preventDefault();
+            const category = $(this).data('category');
+            console.log('Clicked category:', category); // Mensaje de depuración
+            const categoryResults = content.find(item => item.title.toLowerCase() === category.toLowerCase());
+            if (categoryResults) {
+                console.log('Category results:', categoryResults); // Mensaje de depuración
+                displayCategoryResults(categoryResults.keywords);
+            }
+        });
 
-	/*======================================
-	Data Css js
-	========================================*/
-	$("[data-background").each(function () {
-		$(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
-	});
+        function capitalize(str) {
+            return str.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+        }
 
-	$("[data-width]").each(function () {
-		$(this).css("width", $(this).attr("data-width"));
-	});
+        function displayCategoryResults(results) {
+            const resultsContainer = $(".df-category-results");
+            resultsContainer.empty();
+            results.forEach(result => {
+                resultsContainer.append(`<p><a href="${result.url}">${result.keyword}</a></p>`);
+            });
+        }
 
-	$("[data-bg-color]").each(function () {
-		$(this).css("background-color", $(this).attr("data-bg-color"));
-	});
-	
-	/*======================================
-	 Cart Quantity Js
-	========================================*/
-	$(".cart-minus").click(function () {
-		var $input = $(this).parent().find("input");
-		var count = parseInt($input.val()) - 1;
-		count = count < 1 ? 1 : count;
-		$input.val(count);
-		$input.change();
-		return false;
-	});
+        // Código de búsqueda adicional de search.js
+        const searchForm = document.querySelector('.df-search-form form');
+        const searchInput = document.querySelector('.df-search-input input');
+        const searchResults = document.createElement('div');
+        searchResults.classList.add('search-results');
+        document.querySelector('.df-search-form').appendChild(searchResults);
 
-	$(".cart-plus").click(function () {
-		var $input = $(this).parent().find("input");
-		$input.val(parseInt($input.val()) + 1);
-		$input.change();
-		return false;
-	});
+        searchForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = searchInput.value.toLowerCase().trim();
+            searchResults.innerHTML = '';
+
+            if (query) {
+                const results = searchContent(query);
+                displayResults(results);
+            }
+        });
+
+        function searchContent(query) {
+            return content.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.keywords.some(keywordObj => keywordObj.keyword.toLowerCase().includes(query))
+            );
+        }
+
+        function highlightKeywords(text, query) {
+            const words = query.split(' ');
+            let highlightedText = text;
+            words.forEach(word => {
+                if (word.length > 2) {
+                    const regex = new RegExp(`(${word})`, 'gi');
+                    highlightedText = highlightedText.replace(regex, '<mark>$1</mark>');
+                }
+            });
+            return highlightedText;
+        }
+
+        function displayResults(results) {
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.classList.add('search-result-item');
+                    const highlightedTitle = highlightKeywords(result.title, searchInput.value);
+                    resultItem.innerHTML = `<a href="${result.url}">${highlightedTitle}</a>`;
+
+                    // Agregar palabras clave con sus URLs
+                    const keywordsList = document.createElement('ul');
+                    result.keywords.forEach(keywordObj => {
+                        if (keywordObj.keyword.toLowerCase().includes(searchInput.value.toLowerCase())) {
+                            const keywordItem = document.createElement('li');
+                            keywordItem.innerHTML = `<a href="${keywordObj.url}">${keywordObj.keyword}</a>`;
+                            keywordsList.appendChild(keywordItem);
+                        }
+                    });
+                    resultItem.appendChild(keywordsList);
+                    searchResults.appendChild(resultItem);
+                });
+            } else {
+                searchResults.innerHTML = '<p>No results found</p>';
+            }
+        }
+
+        // Close search results when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!searchForm.contains(event.target)) {
+                searchResults.innerHTML = '';
+            }
+        });
+
+        // Add keyup event listener for real-time search
+        searchInput.addEventListener('keyup', function() {
+            const query = this.value.toLowerCase().trim();
+            if (query.length >= 2) {
+                const results = searchContent(query);
+                displayResults(results);
+            } else {
+                searchResults.innerHTML = '';
+            }
+        });
+    });
+
+    /*======================================
+    Sticky Header Js
+    ========================================*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 250) {
+            $("#header-sticky").addClass("sticky");
+        } else {
+            $("#header-sticky").removeClass("sticky");
+        }
+    });
+
+    /*======================================
+    Data Css js
+    ========================================*/
+    $("[data-background").each(function () {
+        $(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
+    });
+
+    $("[data-width]").each(function () {
+        $(this).css("width", $(this).attr("data-width"));
+    });
+
+    $("[data-bg-color]").each(function () {
+        $(this).css("background-color", $(this).attr("data-bg-color"));
+    });
+
+
+
 
 
 	/*======================================

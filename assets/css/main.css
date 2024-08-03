@@ -97,11 +97,12 @@ h6 {
 :root { 
   --primary-font: 'Inter', sans-serif;
   --secondary-font: 'Roboto', sans-serif;
+  --tercery-font: 'PT Serif', 'Times New Roman', Times, serif;
  
   --theme-color: #319cff;
   --theme-color-1: #102039;
   --theme-color-2: #243F5F;
-  --theme-color-3: #82e0ff;
+  --theme-color-3: #00b7ff;
   --theme-color-4: #003366;
   --theme-color-5: #0b0040;
   --theme-color-6: #002A66;
@@ -642,7 +643,32 @@ figure{
 /*----------------------------------------*/
 /*  SECTION TITLE CSS START
 /*----------------------------------------*/
+.centered-content {
+  font-family: --tercery-font;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
 
+.section-title-2 {
+  font-family: --tercery-font;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.section-title-3 {
+  font-family: --tercery-font;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 46px;
+  color: #ffffff;
+}
 
 .section-title {
   font-size: 36px;
@@ -1070,7 +1096,6 @@ figure{
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
 }
-
 /*----------------------------------------*/
 /*  SEARCH CSS START
 /*----------------------------------------*/
@@ -1081,10 +1106,10 @@ figure{
   right: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #fff;
+  background-color: var(--theme-color-1);
   padding: 40px 15px;
   visibility: visible;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-120%);
 }
 .df-search-area.opened {
@@ -1107,26 +1132,26 @@ figure{
   font-size: 24px;
 }
 .df-search-input button:hover {
-  color: var(--tp-theme-primary);
+  color: var(--theme-color);
 }
 .df-search-category span {
-  color: var(--clr-common-black);
+  color: var(--theme-color);
 }
 .df-search-category a {
   font-size: 14px;
   margin-left: 5px;
-  color: #003576;
+  color: var(--theme-color-3);
 }
 .df-search-category a:hover {
-  color: var(--theme-color-3);
+  color: var(--theme-color);
 }
 
 .df-search-input input[type="text"] {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #00afca;
 }
 
 .df-search-category a:hover {
-  color: #000080;
+  color: #ffffff;
 }
 
 .df-search-close {
@@ -1134,9 +1159,9 @@ figure{
 }
 .df-search-close-btn {
   border-radius: 50%;
-  background: #ECECEC;
+  background: #ffffff;
   border: 9px solid transparent;
-  color: var(--clr-common-black);
+  color: var(--theme-color-1);
   width: 36px;
   height: 36px;
   display: inline-flex;
@@ -1153,7 +1178,7 @@ figure{
   top: 46%;
   left: 1px;
   transform-origin: 50% 50%;
-  background-color: var(--clr-common-black);
+  background-color: var(--theme-color-1);
   opacity: 1;
   -moz-transition: -moz-transform ease 0.25s;
   -webkit-transition: -webkit-transform ease 0.25s;
@@ -1172,6 +1197,30 @@ figure{
 }
 .df-search-close-btn:hover::after {
   transform: rotate(45deg);
+}
+/* Estilos para los resultados de búsqueda */
+.search-results {
+  margin-top: 20px;
+}
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+}
+.search-result-item a {
+  color: var(--theme-color-3);
+  text-decoration: none;
+}
+.search-result-item a:hover {
+  text-decoration: underline;
+}
+.search-results p {
+  color: var(--theme-color-3);
+}
+/* Estilos para los resultados de búsqueda */
+.df-category-results p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 /*----------------------------------------*/
