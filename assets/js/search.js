@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function searchContent(query) {
         const content = [
-            { title: 'Asphalt Paving', url: 'asphalt_paving.html', keywords: ['asphalt', 'paving', 'installation', 'resurfacing', 'replacement', 'extension'] },
+            { title: 'Asphalt Paving', url: 'asphalt-paving.html', keywords: ['asphalt', 'paving', 'installation', 'resurfacing', 'replacement', 'extension'] },
             { title: 'Sealer', url: 'sealer.html', keywords: ['sealcoating', 'asphalt maintenance', 'crack filling', 'line striping'] },
             { title: 'Masonry', url: 'masonry.html', keywords: ['pavers installation', 'paver maintenance', 'retaining walls', 'belgium blocks'] },
             { title: 'Concrete', url: 'concrete.html', keywords: ['walkways', 'sidewalks', 'curbs', 'aprons'] },

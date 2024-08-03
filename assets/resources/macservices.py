@@ -51,7 +51,7 @@ for index, row in df.iterrows():
         # Generate HTML content
         try:
             html_content = template.render(product_data)
-            file_name = f"{row['service_title'].replace(' ', '_').lower()}.html"
+            file_name = f"{row['service_title'].replace(' ', '-').lower()}.html"
             with open(file_name, "w", encoding='utf-8') as f:
                 f.write(html_content)
             print(f"Generated file: {file_name}")

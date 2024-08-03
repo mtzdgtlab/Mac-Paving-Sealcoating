@@ -117,7 +117,7 @@
         const content = [
             {
                 title: 'Asphalt Paving', 
-                url: 'asphalt_paving.html', 
+                url: 'asphalt-paving.html', 
                 keywords: [
                     { keyword: 'Installation', url: 'installation.html' },
                     { keyword: 'Resurfacing', url: 'resurfacing.html' },
@@ -130,19 +130,19 @@
                 url: 'sealer.html', 
                 keywords: [
                     { keyword: 'Sealcoating', url: 'sealcoating.html' },
-                    { keyword: 'Asphalt Maintenance', url: 'asphalt_maintenance.html' },
-                    { keyword: 'Crack Filling', url: 'crack_filling.html' },
-                    { keyword: 'Line Striping', url: 'line_striping.html' }
+                    { keyword: 'Asphalt Maintenance', url: 'asphalt-maintenance.html' },
+                    { keyword: 'Crack Filling', url: 'crack-filling.html' },
+                    { keyword: 'Line Striping', url: 'line-striping.html' }
                 ]
             },
             {
                 title: 'Masonry', 
                 url: 'masonry.html', 
                 keywords: [
-                    { keyword: 'Pavers Installation', url: 'pavers_installation.html' },
-                    { keyword: 'Paver Maintenance', url: 'paver_maintenance.html' },
-                    { keyword: 'Retaining Walls', url: 'retaining_walls.html' },
-                    { keyword: 'Belgium Blocks', url: 'belgium_blocks.html' }
+                    { keyword: 'Pavers Installation', url: 'pavers-installation.html' },
+                    { keyword: 'Paver Maintenance', url: 'pavers-maintenance.html' },
+                    { keyword: 'Retaining Walls', url: 'retaining-walls.html' },
+                    { keyword: 'Belgium Blocks', url: 'belgium-blocks.html' }
                 ]
             },
             {
@@ -162,14 +162,14 @@
                 title: 'Landscaping', 
                 url: 'landscaping.html', 
                 keywords: [
-                    { keyword: 'Sod Installation ', url: 'sod_installation.html' },
-                    { keyword: 'Top Soil', url: 'top_soil.html' },
-                    { keyword: 'Seed Grass', url: 'seed_grass.html' },
+                    { keyword: 'Sod Installation ', url: 'sod-installation.html' },
+                    { keyword: 'Top Soil', url: 'top-soil.html' },
+                    { keyword: 'Seed Grass', url: 'seed-grass.html' },
                     { keyword: 'Drainage', url: 'drainage.html' },
                     { keyword: 'Gutters', url: 'gutters.html' },
-                    { keyword: 'Power Wash', url: 'power_wash.html' },
+                    { keyword: 'Power Wash', url: 'power-wash.html' },
                     { keyword: 'Hauling', url: 'hauling.html' },
-                    { keyword: 'Winter Services ', url: 'winter_services.html' }
+                    { keyword: 'Winter Services ', url: 'winter-services.html' }
                 ]
             }
         ];
