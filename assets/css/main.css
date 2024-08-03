@@ -297,7 +297,7 @@ textarea {
 /*----------------------------------------
    Bootstrap customize
 -----------------------------------------*/
-.container, .container-fluid {
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   --bs-gutter-x: 3rem;
 }
 
@@ -310,7 +310,12 @@ figure{
 }
 
 @media (min-width: 1441px) {
-  .container {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
     max-width: 1350px;
   }
 }
@@ -320,18 +325,87 @@ figure{
   padding: 0 15px;
 }
 
+.large-container-1 {
+  max-width: 1740px;
+  margin: 0 0 0 auto;
+  padding: 0 15px;
+}
+
 .small-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.g-0 {
+.g-40,
+.gx-40 {
+  --bs-gutter-x: 40px;
+}
+
+.g-40,
+.gy-40 {
+  --bs-gutter-y: 40px;
+}
+
+.g-50,
+.gx-50 {
+  --bs-gutter-x: 50px;
+}
+
+.g-50,
+.gy-50 {
+  --bs-gutter-y: 50px;
+}
+
+.g-60,
+.gy-60 {
+  --bs-gutter-y: 60px;
+}
+
+.g-0, .gy-0 {
   --bs-gutter-y: 0;
 }
 
-.g-0 {
+.g-0, .gx-0 {
   --bs-gutter-x: 0;
+}
+
+.g-15 {
+  --bs-gutter-y: 15px;
+  --bs-gutter-x: 15px;
+}
+/* Ajustes de `gutter` para dispositivos pequeños */
+@media (max-width: 575px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl,
+  .row {
+    --bs-gutter-x: 1rem; /* Reducir el espacio entre columnas en pantallas pequeñas */
+  }
+
+  .small-container {
+    max-width: 100%;
+    padding: 0 10px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  .large-container, .large-container-1 {
+    max-width: 100%;
+    padding: 0 10px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .col-xs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .small-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
 
 /*---------------------------------
@@ -749,10 +823,15 @@ figure{
 /*  SPACE CSS START
 /*----------------------------------------*/
 
-
 .section-space {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+@media only screen and (min-width: 1200px) {
+  .section-space {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-space {
@@ -766,16 +845,21 @@ figure{
     padding-bottom: 80px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .section-space {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
 .section-space-top {
   padding-top: 120px;
 }
+@media only screen and (min-width: 1200px) {
+  .section-space-top {
+    padding-top: 140px;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-space-top {
     padding-top: 100px;
@@ -786,14 +870,19 @@ figure{
     padding-top: 80px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .section-space-top {
-    padding-top: 70px;
+    padding-top: 50px;
   }
 }
 
 .section-space-bottom {
   padding-bottom: 120px;
+}
+@media only screen and (min-width: 1200px) {
+  .section-space-bottom {
+    padding-bottom: 140px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-space-bottom {
@@ -805,15 +894,20 @@ figure{
     padding-bottom: 80px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .section-space-bottom {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
 }
 
 .section-space-medium {
   padding: 100px 0;
 }
+@media only screen and (min-width: 1200px) {
+  .section-space-medium {
+    padding: 120px 0;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-space-medium {
     padding: 80px 0;
@@ -824,15 +918,20 @@ figure{
     padding: 60px 0;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .section-space-medium {
-    padding: 60px 0;
+    padding: 50px 0;
   }
 }
 
 .section-space-small {
   padding: 80px 0;
 }
+@media only screen and (min-width: 1200px) {
+  .section-space-small {
+    padding: 100px 0;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-space-small {
     padding: 80px 0;
@@ -843,9 +942,26 @@ figure{
     padding: 60px 0;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (max-width: 575px) {
+  .section-space {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-space-top {
+    padding-top: 50px;
+  }
+
+  .section-space-bottom {
+    padding-bottom: 50px;
+  }
+
+  .section-space-medium {
+    padding: 50px 0;
+  }
+
   .section-space-small {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 }
 
@@ -2842,18 +2958,18 @@ h1.banner-title {
 /*----------------------------------------*/
 
 .icon-box-counter-area .icon-box {
-  font-size: 70px;
+  font-size: 40px;
   color: var(--theme-color);
 }
 
 .icon-box-counter-area h3 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .icon-box-counter-area {
   display: flex;
   justify-content: start;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
 }
 
