@@ -15,20 +15,21 @@
    <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
    
-   <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-   <link rel="stylesheet" href="assets/css/animate.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-   <link rel="stylesheet" href="assets/css/slick.css">
-   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
-   <link rel="stylesheet" href="assets/css/icomoon.css">
-   <link rel="stylesheet" href="assets/css/spacing.css">
-   <link rel="stylesheet" href="assets/css/main.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+ <!-- CSS here -->
+ <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+ <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+ <link rel="stylesheet" href="assets/css/animate.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ <link rel="stylesheet" href="assets/css/slick.css">
+ <link rel="stylesheet" href="assets/css/magnific-popup.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
+ <link rel="stylesheet" href="assets/css/icomoon.css">
+ <link rel="stylesheet" href="assets/css/spacing.css">
+ <link rel="stylesheet" href="assets/css/main.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
@@ -67,12 +68,11 @@
                <div class="df-search-close text-center mb-20">
                   <button class="df-search-close-btn"></button>
                </div>
-               <form id="search-form">
+               <form id="search-form" action="https://d1-database.mtzdgtlab.workers.dev" method="GET">
                   <div class="df-search-input mb-10">
-                     <input type="text" id="search-input" placeholder="Search here...">
+                     <input type="text" name="query" placeholder="Search here...">
                      <button type="submit"><i class="icon-search"></i></button>
                   </div>
-                  <div id="search-results" class="search-results"></div>
                   <div class="df-search-category">
                      <span>Search by: </span>
                      <a href="#">Asphalt Paving, </a>
@@ -82,6 +82,8 @@
                      <a href="#">Landscaping </a>
                   </div>
                </form>
+               <!-- Contenedor para los resultados de búsqueda -->
+               <div id="search-results" class="mt-20"></div>
             </div>
          </div>
       </div>
