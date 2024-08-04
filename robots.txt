@@ -12,11 +12,11 @@ Disallow: /funtion/
 User-agent: *
 Allow: /assets/js/jquery-3.6.0.min.js
 Allow: /assets/js/bootstrap.bundle.min.js
-Allow: /assets/js/main.js
+Allow: /assets/js/main.min.js
 Allow: /assets/js/magnific-popup.min.js
 Allow: /assets/js/slick.min.js
 Allow: /assets/js/sweetalert2.all.min.js
-Allow: /assets/js/meanmenu.min.js
+Allow: assets/js/meanmenu.min.js
 
 # Bloquea el acceso a ciertos tipos de archivos
 User-agent: *
