@@ -23,19 +23,20 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Files -->
+    <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
-    <link rel="stylesheet" href="assets/css/icomoon.css">
-    <link rel="stylesheet" href="assets/css/spacing.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
+    <link rel="stylesheet" href="assets/css/icomoon.min.css">
+    <link rel="stylesheet" href="assets/css/spacing.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 
     <!-- Inline CSS to ensure specificity -->
     <style>
@@ -1570,7 +1571,7 @@
     <!-- Footer Area End -->
 
 
-    <!-- JS Here -->
+    <!-- JS here -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1578,22 +1579,26 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/counterup.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/counterup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var currentPage = window.location.pathname.split("/").pop();
-            var menuItems = document.querySelectorAll("#mobile-menu a");
+            var menuItems = document.querySelectorAll('#mobile-menu > ul > li');
 
             menuItems.forEach(function (item) {
-                if (item.getAttribute("href") === currentPage) {
-                    item.classList.add("current-page");
+                var link = item.querySelector('a');
+                if (link.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
                 }
             });
+
+            if (currentPage === '' || currentPage === 'index.html') {
+                menuItems[0].classList.add('active');
+            }
         });
     </script>
-
 </body>
 
 </html>
